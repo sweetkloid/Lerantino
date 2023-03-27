@@ -39,23 +39,64 @@ nav a:hover {
   color: var(--primary);
 }
 
+.title-me{
+display: flex;
+display: inline-block;
+padding-left: 5px;
+background-color: white;
+}
+
+.main-title{
+  
+  background:var(--secondary);
+  width: 250px;
+ 
+}
+
+h1{
+  font-size: 40px;
+  color: var(--tertiary);
+  text-align: right;
+  padding-right: 10px;
+
+}
+
+h3{
+  font-size: 25px;
+}
+
+#background{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: end;
+ background-image: 
+ linear-gradient(to bottom, rgb(17, 81, 96), transparent 110%, rgb(35, 94, 129)),
+ url("../images/02-hero-bg.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: auto;
+ height: 200px; 
+}
+
 #background1{
   display: flex;
  align-items: end;
  background-image:url("../images/02-portfolio-4.jpg");
  background-repeat: no-repeat;
  background-size: cover;
- width: auto;
+ width: 500px;
  height: 200px;
+ border-color: 100px solid aqua;
 }
 #background2{
-  display: flex;
-  align-items: end;
+display: flex;
+align-items: end;
  background-image:url("../images/02-portfolio-1.jpg");
  background-repeat: no-repeat;
  background-size: cover;
- width: auto;
+ width: 200px;
  height: 200px;
+ 
 }
 
 #background3{
@@ -87,17 +128,11 @@ nav a:hover {
   height: 200px;
 }
 
-.title-me{
-display: flex;
-display: inline-block;
-padding-left: 5px;
-background-color: white;
-}
-
 #box-background{
-    background: var(--secondary);
-    padding-left: 15px;
-    width: 250px; 
+  background: var(--secondary);
+  width: 220px;
+  height: 50px;
+  margin: 125px;
  }
  #box-background1{
   background: var(--secondary);
@@ -105,59 +140,13 @@ background-color: white;
   height: 50px;
   margin-bottom: 20px; 
 }
-#box-background3{
- display: flex;
- justify-content: flex-end;
- background-image: 
- linear-gradient(to bottom, rgb(17, 81, 96), transparent 110%, rgb(35, 94, 129)),
- url("../images/02-hero-bg.jpg");
- background-repeat: no-repeat;
- background-size: cover;
- width: auto;
- height: 200px; 
-}
-.picture-container:hover {
-  background: #444;
-}
-#down{
-    margin-top:140px;
-    margin-right:50px;
-}
+
 nav{
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   background-color: var(--tertiary);
   padding-bottom: 15px;
-
-}
-
-.main-title{
-  
-  background:var(--secondary);
-  width: 250px;
- 
-
-}
-h1{
-  font-size: 40px;
-  color: var(--tertiary);
-  text-align: right;
-  padding-right: 10px;
-
-}
-
-h3{
-  font-size: 25px;
-}
-
-text-right {
-  
-  text-align: right;
-  
-}
-text-left {
-  text-align: right;
 
 }
 
@@ -182,64 +171,37 @@ p{
   font-size: 15px;
 }
 
-.about-container {
+.about-container, .work-container {
   display: flex;
 }
-.work-container{
-  display:flex;
-}
 .sidebar {
-  border-right: 5px solid var(--tertiary);
+ display: flex;
+ align-items: flex-start;
+border-right: 5px solid var(--tertiary);
+
 }
 
-.borderme{
-  font-size: 34px;
+.borderme, .borderme2, .borderme3{
+  font-size: 40px;
   padding-right: 30px;
- /* border-right: 5px solid var(--tertiary);
-    height: 200px; */
-}
-.borderme2{
-  font-size: 34px;
- /* border-right: 5px solid var(--tertiary);
-    height: 300px; */
-}
-.borderme3{
-  font-size: 34px;
-/*  border-right: 5px solid var(--tertiary);
-    height: 150px; */
 }
 
-.content {
+.content{
   margin-left: 30px;
+}
+.content2{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
 }
 
 .content3{
-  font-size: 15px;
-  grid-column: 1 / 3;
-  grid-row: 1;
-}
-.content4 {
-  grid-column: 3 ;
-  grid-row: 1 / 3;
-}
-.content5 {
-  grid-column: 1 ;
-  grid-row: 2 ;
-}
-.content6 {
-  grid-column: 2;
-  grid-row: 2;
-}
-.content7 {
-  grid-column: 2;
-  grid-row: 2;
-}
-.subcontent1{
-  font-size: 10px;
+  font-size: 20px;
+} 
+.subcontent{
+  font-size: 9px;
 }
 
-
-/* @media screen and (min-width: 500px) { */
 @media screen and (max-width: 500px) {
 
   .sidebar {
@@ -248,22 +210,19 @@ p{
     
   }
 
-  .about-container .work-container {
+  .about-container, .work-container {
     display: flex;
     flex-direction: column;
   }
   
-  .borderme {
+  .borderme, .borderme2, .borderme3 {
     border-bottom: 5px solid var(--tertiary);
     border-right: none;
   }
 
-  .content {
+  .content, .content2 {
     float: right;
     width: 79.7872%;
-  /*  margin-left: 0;
-    margin-top: 30px; */
-
     margin: 30px 0 0 0;
   }
 

@@ -73,6 +73,46 @@ nav{
   padding-bottom: 15px;
 
 }
+
+/* h2{
+  padding: left 8%;
+  text-align:end;
+display:flex;
+flex-wrap: wrap;
+align-items:flex-end;
+margin:1%;
+border-right: 3px solid var(--primary);
+padding-right: 10px;
+margin-bottom: 70%;
+padding-bottom: 40px;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  flex-wrap: wrap;
+  font-size: xx-large;
+  align-items: stretch;
+  align-content: flex-end;
+  flex-grow: 100;
+  margin-left: 10%;
+}
+.rightbar{
+  inlin
+}
+p.aboutme{
+   display:inline;  
+    margin-left: 16%;  
+    padding-inline: 10%;  
+    margin-top: 30px;
+    background-color: antiquewhite;
+} */
+
+
+
+
+
+
 .main-title{
   
   background:var(--secondary);
@@ -112,25 +152,6 @@ text-left {
 }
 
 
-.aside-box {
-  /* display: flex;
-  align-items: baseline;
-  justify-content: space-around; */
-  margin-top:5px;
-  /* display: flex; */
-  /* flex-wrap: wrap;
-  flex-direction: wrap;
-  margin-left: 215px;
-  margin-right: 25px;
-  justify-content: center;
-  outline: 2px dashed black;
-  outline-offset: -2px; */
-  background-color: lightsalmon;
-
-   
-  
-  
-}
 .section-box{
   display: flex;
   align-items: baseline;
@@ -143,7 +164,6 @@ text-left {
   width: 150px;
   border-right: 3px solid #bfbfbf;
   display: block;
-  /* height: 150px; */
   
 }
 
@@ -154,4 +174,69 @@ footer{
 }
 .list-me{
   align-self: center;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+  font-family: 'Open Sans', 'sans-serif';
+  background-color: #fff;
+  color: #444;
+}
+
+h1, p {
+  margin: 0 0 1em 0;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 20px;
+  display: grid;
+  grid-gap: 10px;
+}
+
+@media screen and (min-width: 500px) {
+
+  /* no grid support? */
+  .sidebar {
+    float: left;
+    width: 19.1489%;
+  }
+
+  .content {
+    float: right;
+    width: 79.7872%;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr;
+  }
+  
+  .header, .footer {
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
+  }
+
+}
+
+.wrapper > * {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
 }

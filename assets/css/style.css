@@ -50,12 +50,14 @@ nav a:hover {
  width: auto;
  height: 200px; 
 }
+
 .title-me{
 display: flex;
 display: inline-block;
 padding-left: 5px;
 background-color: white;
 }
+
 #box-background{
     background: var(--secondary);
     padding-left: 15px;
@@ -103,14 +105,6 @@ text-left {
 
 }
 
-footer{
-  display: flex;
-  align-items: baseline;
-  
-}
-.list-me{
-  align-self: center;
-}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -122,23 +116,43 @@ body {
   color: #444;
 }
 
-h1, p {
-  margin: 0 0 1em 0;
-}
-
 .wrapper {
   max-width: 940px;
   margin: 0 20px;
   display: grid;
   grid-gap: 10px;
 }
-
+.borderme{
+  border-right: 5px solid var(--tertiary);
+    height: 200px;
+}
+  
+.content3{
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.content4 {
+  grid-column: 3 ;
+  grid-row: 1 / 3;
+}
+.content5 {
+  grid-column: 1 ;
+  grid-row: 2 ;
+}
+.content6 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.content7 {
+  grid-column: 2;
+  grid-row: 2;
+}
 @media screen and (min-width: 500px) {
 
-  /* no grid support? */
   .sidebar {
     float: left;
     width: 19.1489%;
+    
   }
 
   .content {
@@ -153,23 +167,20 @@ h1, p {
   
   .header, .footer {
     grid-column: 1 / -1;
-    /* needed for the floated layout */
     clear: both;
   }
 
 }
 
 .wrapper > * {
-  background-color: #444;
-  color: #fff;
+  background-color:white;
+  color: var(--tertiary);
   border-radius: 5px;
   padding: 20px;
   font-size: 150%;
-  /* needed for the floated layout*/
   margin-bottom: 10px;
 }
 
-/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
 @supports (display: grid) {
   .wrapper > * {
     width: auto;

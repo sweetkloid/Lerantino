@@ -17,12 +17,14 @@ body/*representing the entire page*/ {
   color: var(--primary);
   background-color: var(--light);
   line-height: 1.5;
+  
 }
 
 li {
   display: inline;
 }
-nav a {
+
+ nav a {
   text-decoration: none;
   padding: 5px 10px;
   color: var(--secondary);
@@ -38,12 +40,20 @@ nav a:hover {
   background-size: 100% 100%;
   color: var(--primary);
 }
+nav{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background-color: var(--tertiary);
+  padding-bottom: 15px;
+  width: auto;
 
+}
 .title-me{
-display: flex;
-display: inline-block;
-padding-left: 5px;
-background-color: white;
+  display: flex;
+  display: inline-block;
+  padding-left: 5px;
+  background-color: white;
 }
 
 .main-title{
@@ -74,57 +84,69 @@ h3{
  url("../images/02-hero-bg.jpg");
  background-repeat: no-repeat;
  background-size: cover;
- width: auto;
+ width: 100%;
  height: 200px; 
 }
-
+#background1:hover, #background2:hover, #background3:hover, #background3:hover, #background4:hover, #background5:hover{
+ opacity: 0.4;
+}
 #background1{
+  border: 2px solid aqua;
+  margin: 5px;
   display: flex;
  align-items: end;
  background-image:url("../images/02-portfolio-4.jpg");
  background-repeat: no-repeat;
  background-size: cover;
- width: 500px;
- height: 200px;
+ width: 1300px;
+ height: 500px;
  border-color: 100px solid aqua;
 }
 #background2{
-display: flex;
-align-items: end;
+  border: 2px solid aqua;
+  margin: 2px; 
+  display: flex;
+  align-items: end;
  background-image:url("../images/02-portfolio-1.jpg");
  background-repeat: no-repeat;
  background-size: cover;
- width: 200px;
+ width: 655px;
  height: 200px;
  
 }
 
 #background3{
+  border: 2px solid aqua;
+  margin: 2px; 
   display: flex;
   align-items: end;
   background-image:url("../images/02-portfolio-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 200px;
+  width: 655px;
   height: 200px;
 }
 #background4{
+  border: 2px solid aqua;
+  margin: 2px; 
   display: flex;
   align-items: end;
   background-image:url("../images/02-portfolio-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 200px;
+  width: 655px;
   height: 200px;
 }
 
 #background5{
+  border: 2px solid aqua;
+  margin: 2px; 
   display: flex;
   align-items: end;
   background-image:url("../images/02-run-buddy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 200px;
+  width: 655px;
   height: 200px;
 }
 
@@ -136,51 +158,33 @@ align-items: end;
  }
  #box-background1{
   background: var(--secondary);
-  width: 100px;
-  height: 50px;
+  width: 200px;
+  height: 100px;
   margin-bottom: 20px; 
-}
-
-nav{
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  background-color: var(--tertiary);
-  padding-bottom: 15px;
-
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 40px;
-  font-family: 'Open Sans', 'sans-serif';
-  background-color: #fff;
-  color: #444;
-}
-
-.wrapper {
-  max-width: 940px;
-  margin: 0 20px;
-  display: grid;
-  grid-gap: 10px;
 }
 p{
   font-size: 15px;
 }
 
-.about-container, .work-container {
+.about-container, .work-container, .contact-container {
   display: flex;
 }
 .sidebar {
- display: flex;
+  display: flex;
  align-items: flex-start;
-border-right: 5px solid var(--tertiary);
+  border-right: 5px solid var(--tertiary);
+  margin-right: 30px;
+  margin-left: 200px;
 
 }
-
+.sidebar2{
+  display: flex;
+  
+  border-right: 5px solid var(--tertiary);
+  margin-right: 100px;
+  margin-left: 85px;
+  margin-bottom: 100px;
+}
 .borderme, .borderme2, .borderme3{
   font-size: 40px;
   padding-right: 30px;
@@ -190,27 +194,44 @@ border-right: 5px solid var(--tertiary);
   margin-left: 30px;
 }
 .content2{
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .content3{
-  font-size: 20px;
+  font-size: 30px;
 } 
+
+.conten4{
+  margin-left: 600px;
+}
+.content4 a{
+  display: inline;
+  text-underline-position: under;
+  font-size: 25px;
+  color: var(--tertiary);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+  margin: 15px;;
+}
 .subcontent{
-  font-size: 9px;
+  font-size: 15px;
 }
 
 @media screen and (max-width: 500px) {
 
-  .sidebar {
+  .sidebar, .sidebar2 {
     float: left;
     border-right: none;
     
   }
-
-  .about-container, .work-container {
+.background2{
+  display:flex;
+  flex-wrap: wrap;
+}
+  .about-container, .work-container, .contact-container{
     display: flex;
     flex-direction: column;
   }
@@ -220,9 +241,9 @@ flex-direction: row;
     border-right: none;
   }
 
-  .content, .content2 {
+  .content, .content2, .content4 {
     float: right;
-    width: 79.7872%;
+    width: auto;
     margin: 30px 0 0 0;
   }
 

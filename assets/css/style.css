@@ -23,7 +23,7 @@ body/*representing the entire page*/ {
 li {
   display: inline;
 }
-
+ /* navbar decoration */
  nav a {
   text-decoration: none;
   padding: 5px 10px;
@@ -36,10 +36,12 @@ li {
   transition: all 0.25s ease-in;
   font-size: 1.4rem;
 }
+/* nav hover */
 nav a:hover {
   background-size: 100% 100%;
   color: var(--primary);
 }
+/* navbar adding flex properties */
 nav{
   display: flex;
   align-items: baseline;
@@ -49,20 +51,12 @@ nav{
   width: auto;
 
 }
-.title-me{
-  display: flex;
-  display: inline-block;
-  padding-left: 5px;
-  background-color: white;
-}
-
+/* navbar title box */
 .main-title{
-  
   background:var(--secondary);
   width: 250px;
- 
-}
-
+ }
+/* color added to h1 */
 h1{
   font-size: 40px;
   color: var(--tertiary);
@@ -70,26 +64,32 @@ h1{
   padding-right: 10px;
 
 }
-
 h3{
   font-size: 25px;
 }
-
+/* start of the background for the header and containers  */
 #background{
  display: flex;
  flex-wrap: wrap;
  justify-content: end;
  background-image: 
  linear-gradient(to bottom, rgb(17, 81, 96), transparent 110%, rgb(35, 94, 129)),
- url("../images/02-hero-bg.jpg");
+ url("../images/02-hero-bg.jpg") alt="Header Background";
  background-repeat: no-repeat;
  background-size: cover;
  width: 100%;
  height: 200px; 
 }
-#background1:hover, #background2:hover, #background3:hover, #background3:hover, #background4:hover, #background5:hover{
- opacity: 0.4;
+.nav-flex{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: column;
 }
+.cool-header {
+  display: flex;
+  align-items:end;
+}
+
 #background1{
   border: 2px solid aqua;
   margin: 5px;
@@ -110,19 +110,12 @@ h3{
  background-image:url("../images/02-portfolio-1.jpg");
  background-repeat: no-repeat;
  background-size: cover;
- width: 655px;
+ width: 650px;
  height: 200px;
  
 }
-.nav-flex{
-  display: flex;
-  flex-wrap:wrap;
-  align-items: column;
-}
-.cool-header {
-  display: flex;
-  align-items:end;
-}
+
+/* background boxes for titles */
 #background3{
   border: 2px solid aqua;
   margin: 2px; 
@@ -173,7 +166,7 @@ h3{
 p{
   font-size: 15px;
 }
-
+/* adding flex properties */
 .about-container, .work-container, .contact-container {
   display: flex;
 }
@@ -215,6 +208,7 @@ p{
 .conten4{
   margin-left: 600px;
 }
+/* adding decoration properties to footer navbar */
 .content4 a{
   display: inline;
   text-underline-position: under;
@@ -227,7 +221,7 @@ p{
 .subcontent{
   font-size: 15px;
 }
-
+/* media queries follow */
 @media screen and (max-width: 500px) {
 
   .sidebar, .sidebar2 {
@@ -260,7 +254,7 @@ p{
     grid-template-columns: 1fr;
   }
   
-  .header, .footer {
+  .header {
     grid-column: 1 / -1;
     clear: both;
   }

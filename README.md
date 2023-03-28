@@ -9,8 +9,7 @@ Given the instuctions we built a webpage from scratch using HTML and CSS. We sta
 
 Linked here is the URL that take you to the Github repo for this webpage: https://github.com/sweetkloid/Lerantino.
 
-Here is the final webpage image:
-
+Here is the final webpage image: [Webpage/video](assets/images/challenge2-video.webm)
 ## Credits
 
 Thanks to bootcamp classmates, instructor, and TA's. They helped make this project possible.

@@ -114,7 +114,15 @@ h3{
  height: 200px;
  
 }
-
+.nav-flex{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: column;
+}
+.cool-header{
+  display: flex;
+  align-items:end;
+}
 #background3{
   border: 2px solid aqua;
   margin: 2px; 
@@ -152,7 +160,7 @@ h3{
 
 #box-background{
   background: var(--secondary);
-  width: 220px;
+  width: 250px;
   height: 50px;
   margin: 125px;
  }

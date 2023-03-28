@@ -74,22 +74,15 @@ h3{
  justify-content: end;
  background-image: 
  linear-gradient(to bottom, rgb(17, 81, 96), transparent 110%, rgb(35, 94, 129)),
- url("../images/02-hero-bg.jpg") alt="Header Background";
+ url("../images/02-hero-bg.jpg");
  background-repeat: no-repeat;
  background-size: cover;
  width: 100%;
  height: 200px; 
 }
-.nav-flex{
-  display: flex;
-  flex-wrap:wrap;
-  align-items: column;
+#background1:hover, #background2:hover, #background3:hover, #background3:hover, #background4:hover, #background5:hover{
+ opacity: 0.4;
 }
-.cool-header {
-  display: flex;
-  align-items:end;
-}
-
 #background1{
   border: 2px solid aqua;
   margin: 5px;
@@ -110,11 +103,19 @@ h3{
  background-image:url("../images/02-portfolio-1.jpg");
  background-repeat: no-repeat;
  background-size: cover;
- width: 650px;
+ width: 655px;
  height: 200px;
  
 }
-
+.nav-flex{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: column;
+}
+.cool-header {
+  display: flex;
+  align-items:end;
+}
 /* background boxes for titles */
 #background3{
   border: 2px solid aqua;

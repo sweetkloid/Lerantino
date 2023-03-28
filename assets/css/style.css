@@ -119,7 +119,7 @@ h3{
   flex-wrap:wrap;
   align-items: column;
 }
-.cool-header{
+.cool-header {
   display: flex;
   align-items:end;
 }

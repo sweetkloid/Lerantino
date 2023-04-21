@@ -53,25 +53,34 @@ nav{
 }
 /* navbar title box */
 .main-title{
+  display: flex;
   background:var(--secondary);
-  width: 250px;
+  width: 350px;
+ 
+ }
+.icon{
+  display:inline-flex;
+  justify-content: space-between;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
  }
 /* color added to h1 */
 h1{
   font-size: 40px;
   color: var(--tertiary);
   text-align: right;
-  padding-right: 10px;
-
+  margin-top: 10px;
+  margin-left: 50px;
 }
 h3{
   font-size: 25px;
 }
 /* start of the background for the header and containers  */
 #background{
- display: flex;
- flex-wrap: wrap;
- justify-content: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
  background-image: 
  linear-gradient(to bottom, rgb(17, 81, 96), transparent 110%, rgb(35, 94, 129)),
  url("../images/02-hero-bg.jpg");
@@ -82,6 +91,16 @@ h3{
 }
 #background1:hover, #background2:hover, #background3:hover, #background3:hover, #background4:hover, #background5:hover{
  opacity: 0.4;
+}
+.nav-flex{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: column;
+}
+.cool-header {
+  position: fixed;
+  display: flex;
+  align-items:end;
 }
 #background1{
   border: 2px solid aqua;
@@ -103,19 +122,11 @@ h3{
  background-image:url("../images/02-portfolio-1.jpg");
  background-repeat: no-repeat;
  background-size: cover;
- width: 655px;
+ width: 645px;
  height: 200px;
  
 }
-.nav-flex{
-  display: flex;
-  flex-wrap:wrap;
-  align-items: column;
-}
-.cool-header {
-  display: flex;
-  align-items:end;
-}
+
 /* background boxes for titles */
 #background3{
   border: 2px solid aqua;
@@ -125,7 +136,7 @@ h3{
   background-image:url("../images/02-portfolio-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 655px;
+  width: 640px;
   height: 200px;
 }
 #background4{
@@ -136,7 +147,7 @@ h3{
   background-image:url("../images/02-portfolio-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 655px;
+  width: 640px;
   height: 200px;
 }
 
@@ -148,15 +159,21 @@ h3{
   background-image:url("../images/02-run-buddy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 655px;
+  width: 640px;
   height: 200px;
 }
 
 #box-background{
+  position: sticky;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: flex-end;
   background: var(--secondary);
   width: 250px;
   height: 50px;
-  margin: 125px;
+  margin-right: 30px;
+  
  }
  #box-background1{
   background: var(--secondary);

@@ -1,4 +1,4 @@
-# Lerantino
+# Sweet-Kloid
 challenge 2
 
 ## Description:

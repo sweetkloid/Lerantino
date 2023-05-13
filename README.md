@@ -13,7 +13,7 @@ Linked here is the URL that take you to the Github repo for this webpage: https:
 ![screenshot2](assets/images/screen2.PNG)
 
 Here is a demo of functionality: 
-<video src="assets/images/Sweet-Kloid.mp4" controls title="Title"></video>
+![demo](assets/images/Sweet-Kloid.mp4)
 ## Credits
 
 Thanks to bootcamp classmates, instructor, and TA's. They helped make this project possible.

@@ -1,9 +1,13 @@
-
 html{
   width: 100%;
   height: 100%;
-  background-color: white;
+ background-color: var(--light);
 
+}
+/* sizing to fit page */
+main{
+  max-width: 80%;
+  margin: 0 auto; 
 }
 /* brand color palette */
 :root /*declare variable*/{
@@ -14,16 +18,15 @@ html{
   --light: rgba(238, 238, 247, 1);
 }
 
-body/*representing the entire page*/ {
+/*representing the entire page*/ 
+body{
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--primary);
-  /* background-color: var(--light); */
   line-height: 1.5;
-  
 }
-
+/* getting tabs to lineup */
 li {
   display: inline;
 }
@@ -52,23 +55,25 @@ nav{
   justify-content: space-between;
   background-color: var(--tertiary);
   padding-bottom: 15px;
-  width: auto;
+  width: 100%;
 
 }
 /* navbar title box */
 .main-title{
   display: flex;
   background:var(--secondary);
-  width: 350px;
- 
+  width: 400px;
+  margin: 0;
  }
+
 .icon{
   display:inline-flex;
   justify-content: space-between;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   margin: 10px;
  }
+
 /* color added to h1 */
 h1{
   font-size: 40px;
@@ -78,230 +83,190 @@ h1{
   margin-left: 50px;
 }
 h3{
-  font-size: 25px;
+  font-size: px;
 }
-/* start of the background for the header and containers  */
-#background{
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
- background-image: 
- linear-gradient(to bottom, rgb(17, 81, 96), transparent 110%, rgb(35, 94, 129)),
- url("../images/02-hero-bg.jpg");
- background-repeat: no-repeat;
- background-size: cover;
- width: 100%;
- height: 200px; 
-}
-#background1:hover, #background2:hover, #background3:hover, #background3:hover, #background4:hover, #background5:hover{
- opacity: 0.4;
-}
+
 .nav-flex{
   display: flex;
   flex-wrap:wrap;
   align-items: column;
 }
-.cool-header {
-  position: fixed;
-  display: flex;
-  align-items:end;
-}
-#background1{
-  border: 2px solid aqua;
-  margin: 5px;
-  display: flex;
- align-items: end;
- background-image:url("../images/02-portfolio-4.jpg");
- background-repeat: no-repeat;
+
+/* banner image and gradient */
+#background{
+ background-image: 
+ linear-gradient(to bottom, rgb(17, 81, 96), transparent 110%, rgb(35, 94, 129)),
+ url("../images/02-hero-bg.jpg");
  background-size: cover;
  width: 100%;
- height:50%;
- border-color: 100px solid aqua;
+ height: 200px; 
+ margin-bottom: 10px;
 }
-#background2{
-  border: 2px solid aqua;
-  margin: 2px; 
+.header-flex{
+position: relative;
+}
+/* banner title */
+.content0{
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  position: absolute; 
+  bottom: -20px; 
+  right: 30px;
+}
+/* start of main content */
+.container{
   display: flex;
-  align-items: end;
- background-image:url("../images/02-portfolio-1.jpg");
- background-repeat: no-repeat;
- background-size: cover;
- width: 645px;
- height: 200px;
- 
+  flex-direction: column;
+}
+/* sections */
+.about-container{
+  display: flex;
+  align-items: flex-start;
+  margin-left: 133px;
+}
+.work-container {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+.contact-container{
+  display: flex;
+  align-items: flex-start;
+  margin-left: 90px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* creating abiltity to add title ontop */
+#background1, #background2{
+  position: relative;
 }
 
-/* background boxes for titles */
-#background3{
-  border: 2px solid aqua;
-  margin: 2px; 
-  display: flex;
-  align-items: end;
-  background-image:url("../images/02-portfolio-2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 640px;
-  height: 200px;
-}
-#background4{
-  border: 2px solid aqua;
-  margin: 2px; 
-  display: flex;
-  align-items: end;
-  background-image:url("../images/02-portfolio-3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 640px;
-  height: 200px;
+h2{
+  padding-right: 30px;
+  font-size: 50px;
 }
 
-#background5{
-  border: 2px solid aqua;
-  margin: 2px; 
-  display: flex;
-  align-items: end;
-  background-image:url("../images/02-run-buddy.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 640px;
-  height: 200px;
-}
-
-#box-background{
-  position: sticky;
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  background: var(--secondary);
-  width: 250px;
-  height: 50px;
-  margin-right: 30px;
-  
-}
-
-#box-background1{
-  background: var(--secondary);
-  width: 200px;
-  height: 100px;
-  margin-bottom: 20px; 
-}
 p{
-  font-size: 20px;
+  font-size: 25px;
 }
-/* adding flex properties */
-.about-container, .contact-container {
-  display: flex;
+/* adding title ontop of big image */
+.content3{
+  position: absolute; 
+  bottom: 10px; 
+  left: 10px; 
+  color: black;
+  background-color: var(--secondary);
+  margin-left: -10px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 10px;
 }
-.work-container{
-  display: flex;
-  margin-bottom: 200px;
-}
-.sidebar {
-  display: flex;
- align-items: flex-start;
-  border-right: 5px solid var(--tertiary);
-  margin-right: 30px;
-  margin-left: 200px;
-
-}
-.sidebar2{
-  display: flex;
-  
-  border-right: 5px solid var(--tertiary);
-  margin-right: 100px;
-  margin-left: 85px;
-  margin-bottom: 100px;
-}
-.borderme, .borderme2, .borderme3{
-  font-size: 40px;
+/* adding title ontop of small images */
+.content{
+  position: absolute; 
+  bottom: 5px; 
+  left: 5px; 
+  color: black;
+  background-color: var(--secondary);
+  padding-left: 50px;
   padding-right: 30px;
 }
 
-.content{
-  margin-left: 30px;
+
+.content1, .img-container{
+  border-left: 5px solid var(--primary);
+  padding-left: 20px;
 }
-.content2{
+
+.img-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image1{
+  margin-bottom: 10px;
+  width: 100%;
+  height: 400px;
+  border: 5px solid var(--secondary);
+  opacity: 65%;
+}
+
+
+.image2{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 10px;
+  width: 500px;
+  height: 200px;
+  margin: 5px;
+  border: 5px solid var(--secondary);
+  opacity: 65%;
+}
+/* adding hover to images */
+#imgs:hover{
+  opacity: 40%;
 }
 
-.content3{
-  font-size: 30px;
-} 
-
-.conten4{
-  margin-left: 600px;
+/* aligning images on page */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-/* adding decoration properties to footer navbar */
+
+.row img {
+  flex-basis: 50%;
+}
+
+.content4{
+  margin-bottom: 50px;
+}
 .content4 a{
-  display: inline;
   text-underline-position: under;
   font-size: 25px;
   color: var(--tertiary);
   text-decoration: underline;
   text-decoration-color: var(--secondary);
-  margin: 15px;;
+  margin: 20px;
 }
-.subcontent{
-  font-size: 15px;
-}
-/* media queries follow */
-@media screen and (max-width: 1000px) {
 
-  .sidebar, .sidebar2 {
-    float: left;
-    border-right: none;
-    
-  }
-  .background2, .background2, .background3, .background4, .background5{
-  width: 65px;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+.content4 a:hover {
+  background-size: 100% 100%;
+  color: var(--primary);
 }
-  /* .about-container, .contact-container{
+
+/* adding responsiveness */
+
+@media (max-width:850px) {
+  section{
+    width: 80%;
+  }
+  .about-container, .work-container, .contact-container{
     display: flex;
     flex-direction: column;
-  } */
-  
-  .borderme, .borderme2, .borderme3 {
-    border-bottom: 5px solid var(--tertiary);
-    border-right: none;
+    align-items: center;
+  }
+  .content1, .img-container{
+    border-left:none;
+    border-top: 5px solid var(--tertiary);
   }
 
-  .content, .content2, .content4 {
-    float: right;
-    width: auto;
-    margin: 30px 0 0 0;
+  .image1{
+      width: 95%;
+    }
+   
+  li{
+    display: flex;
+    flex-wrap: wrap;
+    
   }
-
-  .wrapper {
-    margin: 0 auto;
-    grid-template-columns: 1fr;
+  .content4 a{
+    margin: 20px;
   }
-  
-  .header {
-    grid-column: 1 / -1;
-    clear: both;
-  }
-
+main{
+  margin: 0;
 }
-
-.wrapper > * {
-  background-color:white;
-  color: var(--tertiary);
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
-  margin-bottom: 10px;
-}
-
-@supports (display: grid) {
-  .wrapper > * {
-    width: auto;
-    margin: 0;
-  }
 }
